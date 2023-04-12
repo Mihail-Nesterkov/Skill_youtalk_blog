@@ -321,6 +321,7 @@ header {
     padding: 14px 20px;
     background: #16C8BB;
     border-radius: 4px;
+    border: none;
 }
 .your_mail label {
     margin-bottom: 8px;
