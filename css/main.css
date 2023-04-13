@@ -18,6 +18,11 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
 .head_menu {
     display: flex;
     flex-wrap: wrap;
@@ -48,9 +53,6 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
-.button_head {
-
-}
 .button_head a {
     font-weight: 700;
     font-size: 16px;
@@ -61,6 +63,11 @@ header {
     background: #E3F5F5;
     border-radius: 4px;
     text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+    .button_head a {
+        display: none;
+    }
 }
 .button_head a:hover, .button_head a:focus, .button_head a:active {
     color: #333333;
@@ -105,11 +112,13 @@ header {
 }
 .themes {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 23px;
 }
 .themes a {
     display: flex;
+    margin-bottom: 8px;
     align-items: center;
     gap: 4px;
 
@@ -157,6 +166,11 @@ header {
     border: 1px solid #DEDEDE;
     border-radius: 16px;
 }
+@media screen and (max-width: 1024px) {
+    .card {
+        max-width: 468px;
+    }
+}
 .card_s {
     margin-bottom: 23px;
     position: relative;
@@ -166,6 +180,12 @@ header {
     overflow: hidden;
     border: 1px solid #DEDEDE;
     border-radius: 16px;
+}
+@media screen and (max-width: 1024px) {
+    .card_s {
+        max-width: 304px;
+        min-height: 458px;
+    }
 }
 .c1 p:first-of-type{
     position: absolute;
@@ -245,6 +265,11 @@ header {
     margin-top: 56px;
     margin-bottom: 96px;
 }
+@media screen and (max-width: 1024px) {
+    .button_main_wrapper {
+        margin-bottom: 59px;
+    }
+}
 #button_main_wrapper {
     padding: 12px 72px;
     background: #35B3A9;
@@ -270,6 +295,11 @@ header {
 /* /footer */
 .footer {
     background: #2963A3;
+}
+@media screen and (max-width: 1024px) {
+    .footer {
+        display: none;
+    }
 }
 .footer a:hover, .footer a:focus, .footer a:active {
     color: #494949;
