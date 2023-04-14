@@ -23,11 +23,22 @@ header {
         max-width: 960px;
     }
 }
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 728px;
+    }
+}
 .head_menu {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px 0;
+}
+@media screen and (max-width: 768px) {
+    .head_menu {
+    justify-content: space-between;
+    }
 }
 .menu a {
     margin-left: 0;
@@ -42,6 +53,53 @@ header {
 }
 .menu a:hover, .menu a:focus, .menu a:active {
     opacity: 70%;
+}
+.menu_mini {
+    position: relative;
+}
+.menu_mini:active ul, .menu_mini:hover ul {
+    display: flex;
+}
+.menu_mini ul {
+    position: absolute;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    height: 160px;
+    background: #DEDEDE;
+    padding: 10px;
+}
+.menu_mini li {
+    margin: 2px;
+    list-style-type: none;
+    background: darkgray;
+    border-radius: 5px;
+}
+.menu_mini li:active, .menu_mini li:hover {
+    background: wheat;
+}
+.menu_mini a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    text-decoration: none;
+    color: black;
+    padding: 10px 5px;
+    margin: 2px;
+}
+@media screen and (min-width: 769px) {
+    .menu_mini {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu a {
+        display: none;
+    }
 }
 .menu a:last-child {
     margin-right: 164px;
@@ -147,7 +205,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 23px;
+    /*margin-bottom: 23px;*/
 }
 .big_card a {
     text-decoration: none;
@@ -161,6 +219,7 @@ header {
     position: relative;
     max-width: 588px;
     min-height: 499px;
+    margin-bottom: 24px;
 
     overflow: hidden;
     border: 1px solid #DEDEDE;
@@ -169,6 +228,17 @@ header {
 @media screen and (max-width: 1024px) {
     .card {
         max-width: 468px;
+        min-height: 599px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: 728px;
+
+    }
+    .card .card_big {
+        width: 728px;
+        height: 404px;
     }
 }
 .card_s {
@@ -185,6 +255,15 @@ header {
     .card_s {
         max-width: 304px;
         min-height: 458px;
+    }
+}
+@media screen and (max-height: 768px) {
+    .card_s {
+        max-width: 352px;
+        height: 446px;
+    }
+    .s_card {
+        height: 206px;
     }
 }
 .c1 p:first-of-type{
@@ -268,6 +347,11 @@ header {
 @media screen and (max-width: 1024px) {
     .button_main_wrapper {
         margin-bottom: 59px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .button_main_wrapper{
+        display: none;
     }
 }
 #button_main_wrapper {
