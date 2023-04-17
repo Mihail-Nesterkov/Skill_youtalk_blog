@@ -18,14 +18,24 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 169px) {
     .wrapper {
         max-width: 960px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 415px) {
     .wrapper {
         max-width: 728px;
+    }
+}
+@media screen and (max-width: 414px) and (min-width: 321px) {
+    .wrapper {
+        max-width: 374px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .wrapper {
+        max-width: 288px;
     }
 }
 .head_menu {
@@ -139,6 +149,11 @@ header {
     position: absolute;
     top: 401px;
 }
+@media screen and (max-width: 1024px) {
+    #grad {
+        display: none;
+    }
+}
 .way {
     display: flex;
     align-items: center;
@@ -228,7 +243,7 @@ header {
 @media screen and (max-width: 1024px) {
     .card {
         max-width: 468px;
-        min-height: 599px;
+        height: 599px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -241,6 +256,30 @@ header {
         height: 404px;
     }
 }
+@media screen and (max-width: 414px) {
+    .card {
+        max-width: 374px;
+        height: 462px;
+    }
+    .card .card_big {
+        max-width: 374px;
+        height: 206px;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    .card {
+        max-width: 288px;
+        height: 478px;
+    }
+    .card .card_big, .card_s .s_card {
+        max-width: 288px;
+        height: 206px;
+    }
+    .big_card_s a:nth-of-type(n+3) {
+        display: none;
+    }
+}
 .card_s {
     margin-bottom: 23px;
     position: relative;
@@ -251,19 +290,36 @@ header {
     border: 1px solid #DEDEDE;
     border-radius: 16px;
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 414px) and (min-width: 321px) {
     .card_s {
-        max-width: 304px;
-        min-height: 458px;
+        max-width: 374px;
+        height: 462px;
+    }
+    .card_s .s_card {
+        width: 374px;
+        height: 206px;
+    }
+    .big_card_s a:nth-of-type(n+3) {
+        display: none;
     }
 }
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) and (min-width: 415px){
     .card_s {
         max-width: 352px;
         height: 446px;
     }
     .s_card {
+        width: 352px;
         height: 206px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .card_s {
+        max-width: 304px;
+        min-height: 458px;
     }
 }
 .c1 p:first-of-type{
