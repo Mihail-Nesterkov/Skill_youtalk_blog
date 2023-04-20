@@ -15,6 +15,7 @@ header {
     z-index: 1;
 }
 .wrapper {
+    padding: 5px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -60,6 +61,11 @@ header {
     color: #333333;
 
     text-decoration: none;
+}
+@media screen and (max-width: 960px) {
+    .menu a {
+        font-size: 12px;
+    }
 }
 .menu a:hover, .menu a:focus, .menu a:active {
     opacity: 70%;
@@ -113,6 +119,11 @@ header {
 }
 .menu a:last-child {
     margin-right: 164px;
+}
+@media screen and (max-width: 960px) {
+    .menu a:last-child {
+        margin-right: 0;
+    }
 }
 .emblem {
     margin-right: 51px;
@@ -297,8 +308,8 @@ header {
         height: 462px;
     }
     .card_s .s_card {
-        width: 374px;
-        height: 206px;
+        max-width: 374px;
+        /*height: 206px;*/
     }
     .big_card_s a:nth-of-type(n+3) {
         display: none;
@@ -541,4 +552,24 @@ header {
     line-height: 20px;
     text-decoration: none;
     color: #FFFFFF;
+}
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+    .menu a:last-child {
+        margin-right: auto;
+    }
+    .menu a {
+        margin-right: 15px;
+    }
+    .head_menu {
+        justify-content: space-between;
+    }
+    .big_card {
+        justify-content: space-around;
+    }
+    .card {
+        max-width: 500px;
+    }
+    .card_s {
+        max-width: 350px;
+    }
 }
